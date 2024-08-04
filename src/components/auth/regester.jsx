@@ -40,7 +40,7 @@ const Register = () => {
       <div className=" hidden md:block md:col-span-5  lg:col-span-6 m-auto">
         <img src={img} alt="vector" className=" w-[450px]" />
       </div>
-      <div className=" col-span-12 sm:col-span-12 w-[90%] m-auto md:col-span-7 lg:col-span-5  border mx-2 my-8  md:mx-8 p-2 text-center bg-white rounded-md min-h-[640px]  ">
+      <div className=" col-span-12 sm:col-span-12 w-[90%] mx-auto md:col-span-7 lg:col-span-5  border  my-8  md:mx-8 p-2 text-center bg-white rounded-md min-h-[640px]  ">
         <h1 className="head-dash text-xl my-9">Create an account</h1>
         <img src={logo} alt="logo" className=" m-auto my-9"></img>
 

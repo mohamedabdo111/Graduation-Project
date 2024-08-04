@@ -21,7 +21,7 @@ const Login = () => {
   }
   return (
     <div className=" grid grid-cols-12 gap-4 bg-login">
-      <div className=" col-span-12 sm:col-span-12 w-[90%] m-auto md:col-span-7 lg:col-span-5  border mx-2 md:mx-8 my-8 p-2 text-center bg-white rounded-md h-[640px]  ">
+      <div className=" col-span-12 sm:col-span-12 w-[90%] mx-auto md:col-span-7 lg:col-span-5  border  md:mx-8 my-8 p-2 text-center bg-white rounded-md h-[640px]  ">
         <h1 className=" head-dash text-xl my-10 ">LOGIN</h1>
         <img src={logo} alt="logo" className=" m-auto my-10"></img>
 
@@ -54,6 +54,7 @@ const Login = () => {
           <span>
             <GoogleLogin
               onSuccess={(credentialResponse) => {
+                console.log(credentialResponse);
                 dispatch(GoogleLoginAction(credentialResponse.credential));
               }}
               onError={() => {
