@@ -24,7 +24,7 @@ const About = () => {
           </Fade>
         </p>
 
-        <Fade triggerOnce={true}>
+        <Fade triggerOnce={true} direction="up">
           <Link
             className=" flex gap-3 w-52 cursor-pointer bg-white px-8 py-5 hover:text-sec justify-center"
             to="/aboutus"

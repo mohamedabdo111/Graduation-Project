@@ -45,8 +45,10 @@ const App = () => {
     <>
       <ScrollToTop></ScrollToTop>
       <Header></Header>
+      <ScrollToTop></ScrollToTop>
 
       <BrowserRouter>
+        <ScrollToTop></ScrollToTop>
         <Routes>
           <Route path="/" element={<LangingPage></LangingPage>}></Route>
           <Route path="/*" element={<Error404></Error404>}></Route>

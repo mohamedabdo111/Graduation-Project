@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../images/Group11.png";
 import img from "../../images/user login.png";
 import HeadderHook from "../../hookPages/headderHook";
+import { ScrollToTop } from "../ScrollToTop";
 const Header = () => {
   const [
     activate,
@@ -22,6 +23,8 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md  ">
+      <ScrollToTop></ScrollToTop>
+
       <div className="container ">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">

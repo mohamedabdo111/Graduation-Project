@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const Banner = () => {
   return (
@@ -8,12 +9,15 @@ const Banner = () => {
       <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
         <div className=" text-center ltr:sm:text-left rtl:sm:text-right max-w-[500px]">
           <h1 className="text-6xl sm:text-7xl banner-text font-thin text-left better">
-            Better Call
-            <>
+            <Fade triggerOnce={true} direction="down">
+              Better Call
+            </Fade>
+
+            <Fade triggerOnce={true} direction="up">
               <strong className="block font-extrabold text-zinc-800 my-3">
                 Home
               </strong>
-            </>
+            </Fade>
           </h1>
         </div>
       </div>
