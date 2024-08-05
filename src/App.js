@@ -29,7 +29,7 @@ import ProtectRouteHock from "./components/protectRoutes/ProtectRoutesHook";
 import ProtectedRoute from "./components/protectRoutes/protectRoutes";
 import UseInformationPage from "./pages/user/useInformationPage";
 import UserUpdatePasswordPage from "./pages/user/userUpdatePassword";
-import { ScrollToTop } from "./components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 import AdminViewUserInformation from "./components/admin/adminViewUserInformation";
 import AdminViewUserInformationPage from "./pages/admin/adminViewUserInformationPage";
 import AdminOwnersPage from "./pages/admin/adminOwnersPage";
@@ -43,9 +43,7 @@ const App = () => {
 
   return (
     <>
-      <ScrollToTop></ScrollToTop>
       <Header></Header>
-      <ScrollToTop></ScrollToTop>
 
       <BrowserRouter>
         <ScrollToTop></ScrollToTop>

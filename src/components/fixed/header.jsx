@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "../../images/Group11.png";
 import img from "../../images/user login.png";
 import HeadderHook from "../../hookPages/headderHook";
-import { ScrollToTop } from "../ScrollToTop";
 const Header = () => {
   const [
     activate,
@@ -16,15 +15,10 @@ const Header = () => {
     userName,
     email,
     Ref,
-    listRef,
-    svgRef,
-    path,
   ] = HeadderHook();
 
   return (
     <header className="bg-white shadow-md  ">
-      <ScrollToTop></ScrollToTop>
-
       <div className="container ">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
@@ -39,7 +33,7 @@ const Header = () => {
                 <li>
                   <a
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="#"
+                    href="/"
                   >
                     Main
                   </a>
