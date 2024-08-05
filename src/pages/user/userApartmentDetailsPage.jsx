@@ -5,6 +5,7 @@ import UserComments from "../../components/user/userComments";
 import GetApartmentDetailsHook from "../../hookPages/getApartmentDetailsHook";
 import { useParams } from "react-router-dom";
 import Loading from "../../components/fixed/Loading";
+import { Fade } from "react-awesome-reveal";
 
 const UserApartmentDetailsPage = () => {
   const { id } = useParams();
@@ -15,11 +16,19 @@ const UserApartmentDetailsPage = () => {
       {!loading ? (
         data && data !== "" ? (
           <>
-            <UserImages apartmentInfo={item ? item : null}></UserImages>
-            <UserInformation userInfo={item ? item : null}></UserInformation>
-            <UserComments
-              comment={item ? item.apartmentComments : null}
-            ></UserComments>
+            <Fade triggerOnce={true} direction="down">
+              <UserImages apartmentInfo={item ? item : null}></UserImages>
+            </Fade>
+
+            <Fade triggerOnce={true} direction="up">
+              <UserInformation userInfo={item ? item : null}></UserInformation>
+            </Fade>
+
+            <Fade triggerOnce={true} direction="up">
+              <UserComments
+                comment={item ? item.apartmentComments : null}
+              ></UserComments>
+            </Fade>
           </>
         ) : (
           <h1 className="for-not-found ">Details Not Founded</h1>

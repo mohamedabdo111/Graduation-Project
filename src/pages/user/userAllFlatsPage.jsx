@@ -7,6 +7,7 @@ import Slider from "react-slider";
 import SidebarSearchHook from "../../hookPages/sidebarSearch";
 import LoadingCard from "../../components/fixed/loadingCard";
 import NotFound from "../../components/fixed/notFound";
+import { Fade } from "react-awesome-reveal";
 
 const UserAllFlatsPage = () => {
   const [loading, , onpres, , , items] = GetAllApartmentHook();
