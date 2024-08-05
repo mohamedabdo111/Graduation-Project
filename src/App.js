@@ -35,6 +35,8 @@ import AdminViewUserInformationPage from "./pages/admin/adminViewUserInformation
 import AdminOwnersPage from "./pages/admin/adminOwnersPage";
 import Error404 from "./pages/error404";
 import RequierBack from "./components/protectRoutes/requierBack";
+import ContactUsPage from "./pages/utility/contactUs";
+import AboutUsPage from "./pages/utility/aboutUs";
 
 const App = () => {
   const [isUser, isAdmin, isOwner, userDate] = ProtectRouteHock();
@@ -159,6 +161,11 @@ const App = () => {
               element={<UserUpdatePasswordPage></UserUpdatePasswordPage>}
             ></Route>
           </Route>
+          <Route
+            path="/contactus"
+            element={<ContactUsPage></ContactUsPage>}
+          ></Route>
+          <Route path="/aboutus" element={<AboutUsPage></AboutUsPage>}></Route>
         </Routes>
       </BrowserRouter>
 

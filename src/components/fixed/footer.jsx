@@ -16,34 +16,26 @@ const Footer = () => {
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
-            <a className="text-white transition hover:text-white/75" href="#">
+            <a
+              className="text-white transition hover:text-white/75"
+              href="/aboutus"
+            >
               About
             </a>
           </li>
 
           <li>
-            <a className="text-white transition hover:text-white/75" href="#">
+            <a
+              className="text-white transition hover:text-white/75"
+              href="/contactus"
+            >
               Contact Us
             </a>
           </li>
 
           <li>
-            <a className="text-white transition hover:text-white/75" href="#">
+            <a className="text-white transition hover:text-white/75" href="/">
               Services{" "}
-            </a>
-          </li>
-
-          <li>
-            <a className="text-white transition hover:text-white/75" href="#">
-              {" "}
-              Projects{" "}
-            </a>
-          </li>
-
-          <li>
-            <a className="text-white transition hover:text-white/75" href="#">
-              {" "}
-              Blog{" "}
             </a>
           </li>
         </ul>
@@ -51,7 +43,7 @@ const Footer = () => {
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
           <li>
             <a
-              href="#"
+              href="https://www.facebook.com/zidanberg"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-white/75"
@@ -74,7 +66,7 @@ const Footer = () => {
 
           <li>
             <a
-              href="#"
+              href="https://www.instagram.com/zidanberg?igsh=MnQzbzMyMXRpZHpj"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-white/75"
@@ -97,7 +89,7 @@ const Footer = () => {
 
           <li>
             <a
-              href="#"
+              href="https://x.com/Zidanberg?t=PvbdwB3fg-CyGJCEL9mdpQ&s=35"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-white/75"
@@ -116,7 +108,7 @@ const Footer = () => {
 
           <li>
             <a
-              href="#"
+              href="https://github.com/mohamedabdo111"
               rel="noreferrer"
               target="_blank"
               className="text-white transition hover:text-white/75"
