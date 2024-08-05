@@ -13,7 +13,6 @@
     "react": "^18.3.1",
     "react-awesome-reveal": "^4.2.14",
     "react-dom": "^18.3.1",
-    "react-loading-skeleton": "^3.4.0",
     "react-multiple-image-input": "^1.0.0",
     "react-paginate": "^8.2.0",
     "react-redux": "^9.1.2",

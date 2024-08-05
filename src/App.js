@@ -33,6 +33,8 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import AdminViewUserInformation from "./components/admin/adminViewUserInformation";
 import AdminViewUserInformationPage from "./pages/admin/adminViewUserInformationPage";
 import AdminOwnersPage from "./pages/admin/adminOwnersPage";
+import Error404 from "./pages/error404";
+import RequierBack from "./components/protectRoutes/requierBack";
 
 const App = () => {
   const [isUser, isAdmin, isOwner, userDate] = ProtectRouteHock();
@@ -44,8 +46,12 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LangingPage></LangingPage>}></Route>
-          <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/register" element={<Register></Register>}></Route>
+          <Route path="/*" element={<Error404></Error404>}></Route>
+          <Route element={<RequierBack></RequierBack>}>
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/register" element={<Register></Register>}></Route>
+          </Route>
+
           <Route
             path="/forget-password"
             element={<ForgetPassword></ForgetPassword>}

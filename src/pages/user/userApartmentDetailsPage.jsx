@@ -9,8 +9,7 @@ import Loading from "../../components/fixed/Loading";
 const UserApartmentDetailsPage = () => {
   const { id } = useParams();
   const [loading, data, item] = GetApartmentDetailsHook(id);
-  console.log(data);
-  console.log(item);
+
   return (
     <div className=" container">
       {!loading ? (
