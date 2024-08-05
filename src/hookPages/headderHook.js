@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { click } from "@testing-library/user-event/dist/click";
+import { useEffect, useRef, useState } from "react";
 const HeadderHook = () => {
   const [ispress, setIsPress] = useState(false);
   const [ispressuser, setIsPressuser] = useState(false);
@@ -20,6 +21,17 @@ const HeadderHook = () => {
     localStorage.removeItem("token");
     window.location.reload();
   };
+
+  // onclick bodyyy
+
+  const Ref = useRef();
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      if (e.target !== Ref.current) {
+        setIsPressuser(false);
+      }
+    });
+  });
   const IsUserHere = JSON.parse(localStorage.getItem("UserInf"));
 
   if (JSON.parse(localStorage.getItem("UserInf")) !== null) {
@@ -45,6 +57,7 @@ const HeadderHook = () => {
     ImageUser,
     userName,
     email,
+    Ref,
   ];
 };
 

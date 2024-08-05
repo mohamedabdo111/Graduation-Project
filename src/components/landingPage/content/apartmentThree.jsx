@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CardsLanding from "./cardslanding";
 import { Link } from "react-router-dom";
-import one, { useDispatch, useSelector } from "react-redux";
-import { GetAllApartmentAction } from "../../../redux/actions/getAllApartmentAction";
 import GetAllApartmentHook from "../../../hookPages/getAllApartmentHook";
 import Loading from "../../fixed/Loading";
 import NotFound from "../../fixed/notFound";

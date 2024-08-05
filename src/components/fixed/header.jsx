@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../../images/Group11.png";
 import img from "../../images/user login.png";
 import HeadderHook from "../../hookPages/headderHook";
-import { Link } from "react-router-dom";
 const Header = () => {
   const [
     activate,
@@ -15,6 +14,10 @@ const Header = () => {
     ImageUser,
     userName,
     email,
+    Ref,
+    listRef,
+    svgRef,
+    path,
   ] = HeadderHook();
 
   return (
@@ -83,7 +86,7 @@ const Header = () => {
             </nav>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex gap-4 items-center ">
             {IsUserHere === null ? (
               <div className="sm:flex sm:gap-4">
                 <a
@@ -103,19 +106,20 @@ const Header = () => {
                 </div>
               </div>
             ) : (
-              <div className="relative">
+              <div className="relative menu-container">
                 <div
-                  className="inline-flex items-center overflow-hidden rounded-md border bg-white"
+                  className="inline-flex items-center overflow-hidden rounded-md "
                   onClick={activeuser}
                 >
                   <img
                     src={ImageUser !== null ? ImageUser : img}
                     alt="user"
-                    className=" cursor-pointer p-1 rounded-full w-[33px] h-[33px] object-cover"
+                    className=" cursor-pointer mt-2 rounded-full w-[35px] h-[35px] object-cover"
                     property="lazy"
+                    ref={Ref}
                   ></img>
 
-                  <button className="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
+                  {/* <button className="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
                     <span className="sr-only">Menu</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +133,7 @@ const Header = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </button>
+                  </button> */}
                 </div>
 
                 {ispressuser ? (

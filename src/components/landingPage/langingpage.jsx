@@ -4,7 +4,6 @@ import About from "./content/about";
 import Main from "./content/main";
 import ApartmentThree from "./content/apartmentThree";
 import ContactUs from "./content/contactUs";
-import Loading from "../fixed/Loading";
 
 const LangingPage = () => {
   return (

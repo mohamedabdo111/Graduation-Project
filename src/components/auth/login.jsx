@@ -1,6 +1,5 @@
 import React from "react";
 import img from "../../images/VECTOR.jpg";
-import google from "../../images/google.png";
 import logo from "../../images/Group11.png";
 import { Link } from "react-router-dom";
 import LoginHook from "../../hookPages/loginHook";

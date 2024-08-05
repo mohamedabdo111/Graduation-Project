@@ -39,10 +39,6 @@ const SidebarSearchHook = () => {
     setActive(true);
   };
 
-  console.log(gender);
-  console.log(city);
-  console.log(Rooms);
-  console.log(users);
   const minu = () => {
     if (users > 0) {
       setUsers(users - 1);

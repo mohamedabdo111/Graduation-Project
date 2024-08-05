@@ -6,13 +6,14 @@ const Banner = () => {
       <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
       <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-        <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right max-w-[500px]">
-          <h1 className="text-6xl font-bold  sm:text-7xl banner-text font-thin text-left better">
+        <div className=" text-center ltr:sm:text-left rtl:sm:text-right max-w-[500px]">
+          <h1 className="text-6xl sm:text-7xl banner-text font-thin text-left better">
             Better Call
-            <strong className="block font-extrabold text-zinc-800 my-3">
-              {" "}
-              Home{" "}
-            </strong>
+            <>
+              <strong className="block font-extrabold text-zinc-800 my-3">
+                Home
+              </strong>
+            </>
           </h1>
         </div>
       </div>

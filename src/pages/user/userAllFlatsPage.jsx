@@ -6,6 +6,7 @@ import PaginationCode from "../../components/fixed/Pagination";
 import Slider from "react-slider";
 import SidebarSearchHook from "../../hookPages/sidebarSearch";
 import LoadingCard from "../../components/fixed/loadingCard";
+import NotFound from "../../components/fixed/notFound";
 
 const UserAllFlatsPage = () => {
   const [loading, , onpres, , , items] = GetAllApartmentHook();
@@ -50,7 +51,9 @@ const UserAllFlatsPage = () => {
               return <UserCard item={item} key={index}></UserCard>;
             })
           ) : (
-            <h1 className="for-not-found">There Are No Apartments</h1>
+            <h1 className="for-not-found">
+              <NotFound item={"apartments"}></NotFound>
+            </h1>
           )
         ) : (
           <>
