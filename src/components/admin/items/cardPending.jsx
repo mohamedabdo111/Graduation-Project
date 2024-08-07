@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "../../../images/user login.png";
 import AcceptPendingHook from "../../../hookPages/acceptPendingHook";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "../../fixed/Loading";
 const CardPending = ({ item }) => {
-  const [Accept, activeModal, NotActive, Decline, loading, active] =
+  const [Accept, activeModal, NotActive, Decline, loading, active, Ispress] =
     AcceptPendingHook(item.apartmentID);
-  console.log(item);
+  const [startDate, setStartDate] = useState(new Date());
+
+  const dateStr = startDate;
+  const date = new Date(item.publishedAt);
+
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  const formattedDate = `${month} ${String(day).padStart(2, "0")} ${year}`;
+
   return (
     <div className=" bg-white my-9 rounded-2xl">
+      {Ispress ? (
+        loading ? (
+          <div className=" fixed top-[50%] left-[50%] positi p-7">
+            <Loading></Loading>
+          </div>
+        ) : null
+      ) : null}
       <div className="p-3 flex gap-3 items-center border-b-2 ">
         <img
           src={item.ownerImage === null ? img : item.ownerImage}
           alt="image"
           width={70}
           height={70}
-          className=" w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] rounded-full "
+          className=" w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] rounded-full object-cover "
           property="lazy"
         ></img>
         <div>
           <p className=" text-gray-600">{item.ownerName}</p>
-          <p className=" text-gray-600">1 week</p>
+          <p className=" text-gray-600">{formattedDate}</p>
         </div>
       </div>
       <div className="p-3 ">

@@ -6,10 +6,12 @@ import { notify } from "../components/fixed/notify";
 const AcceptPendingHook = (id) => {
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState(false);
+  const [Ispress, setIspress] = useState(false);
 
   const dispatch = useDispatch();
 
   const Accept = async () => {
+    setIspress(true);
     setLoading(true);
     await dispatch(
       AcceptPendingAction({
@@ -30,6 +32,7 @@ const AcceptPendingHook = (id) => {
   };
 
   const Decline = async () => {
+    setIspress(true);
     setLoading(true);
     await dispatch(
       AcceptPendingAction({
@@ -45,6 +48,9 @@ const AcceptPendingHook = (id) => {
 
   useEffect(() => {
     if (loading === false) {
+      if (res) {
+        setIspress(false);
+      }
       if (res && res.data && res.data.statusCode === 200) {
         notify("done", "success");
 
@@ -55,7 +61,7 @@ const AcceptPendingHook = (id) => {
     }
   }, [loading]);
 
-  return [Accept, activeModal, NotActive, Decline, loading, active];
+  return [Accept, activeModal, NotActive, Decline, loading, active, Ispress];
 };
 
 export default AcceptPendingHook;

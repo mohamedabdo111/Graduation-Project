@@ -45,7 +45,7 @@ const AdminNotification = ({ clicker }) => {
             })
           ) : (
             <h1 className="for-not-found">
-              <NotFound item={"Notifications"}></NotFound>
+              <NotFound item={"notifications"}></NotFound>
             </h1>
           )
         ) : (

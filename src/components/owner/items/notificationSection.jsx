@@ -7,7 +7,7 @@ const NotificationSection = ({ item }) => {
       <img
         src={item.userImage != null ? item.userImage : img}
         alt="image-user"
-        style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+        style={{ minWidth: "50px", height: "50px", borderRadius: "50%" }}
         className=" object-cover"
         property="lazy"
       ></img>

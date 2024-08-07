@@ -6,6 +6,7 @@ import OwnerAddApartmentHook from "../../hookPages/ownerAddApartmentHook";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Buttondash from "../fixed/buttondash";
+import Loading from "../fixed/Loading";
 
 const OwnerFlat = ({ clicker }) => {
   const [
@@ -35,10 +36,19 @@ const OwnerFlat = ({ clicker }) => {
     imgCover,
     imgCoverlive,
     onChangeImage,
+    loading,
+    Ispress,
   ] = OwnerAddApartmentHook();
 
   return (
     <div className="mb-9">
+      {Ispress ? (
+        loading ? (
+          <div className="fixed top-[50%] left-[50%] positi p-7">
+            <Loading></Loading>
+          </div>
+        ) : null
+      ) : null}
       <div className="  md:flex justify-between items-center">
         <div className=" flex justify-between">
           <div>
@@ -107,6 +117,7 @@ const OwnerFlat = ({ clicker }) => {
               accept="image/*"
               className=" p-2 rounded-lg bg-zinc-800 shadow-xl text-white w-full"
               onChange={onChangeImage}
+              // value={imgCover}
             ></input>
           </div>
         </div>
@@ -132,6 +143,7 @@ const OwnerFlat = ({ clicker }) => {
             <select
               className="p-2 bg-transparent rounded-lg border border-black w-[100%] sm:min-w-[150px]"
               onChange={onChangeCity}
+              value={city}
             >
               <option value="0">select</option>
               <option value="Cairo">Cairo</option>
@@ -155,6 +167,7 @@ const OwnerFlat = ({ clicker }) => {
             <select
               className="p-2 bg-transparent rounded-lg border border-black w-[100%] sm:min-w-[150px]"
               onChange={onChangeGender}
+              value={gender}
             >
               <option value="0">select</option>
               <option value="male">Male</option>
@@ -170,6 +183,7 @@ const OwnerFlat = ({ clicker }) => {
             id="Username"
             className="p-2  bg-transparent rounded-lg w-full border border-black"
             onChange={onChangeAddress}
+            value={address}
           />
         </div>
 
@@ -181,6 +195,7 @@ const OwnerFlat = ({ clicker }) => {
             id="Username"
             className="p-2  bg-transparent rounded-lg w-full border border-black"
             onChange={onChangeInfo}
+            value={info}
           />
         </div>
 
@@ -199,6 +214,7 @@ const OwnerFlat = ({ clicker }) => {
               accept="image/*"
               className=" p-2 rounded-lg bg-zinc-800 shadow-xl text-white w-full"
               onChange={onChangeDocument}
+              // value={imageDoc}
             ></input>
           </div>
         </div>
@@ -209,6 +225,7 @@ const OwnerFlat = ({ clicker }) => {
             <select
               className="p-2 bg-transparent rounded-lg border border-black min-w-[50px]"
               onChange={onChangeRes}
+              value={residents}
             >
               <option value="0">0</option>
               <option value="1">1</option>
@@ -216,6 +233,11 @@ const OwnerFlat = ({ clicker }) => {
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </select>
           </div>
           <div className=" text-center">
@@ -223,6 +245,7 @@ const OwnerFlat = ({ clicker }) => {
             <select
               className="p-2 bg-transparent rounded-lg border border-black min-w-[50px]"
               onChange={onChangeRooms}
+              value={rooms}
             >
               <option value="0">0</option>
               <option value="1">1</option>

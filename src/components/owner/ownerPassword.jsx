@@ -19,8 +19,6 @@ const OwnerPassword = ({ clicker }) => {
     var role = JSON.parse(localStorage.getItem("UserInf")).role;
   }
 
-  console.log(role);
-
   return (
     <div>
       <div className=" flex justify-between items-center">

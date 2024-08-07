@@ -16,13 +16,12 @@ const OwnerAddApartmentHook = () => {
   const [imgCover, setImgCover] = useState("");
   const [imgCoverlive, setImgCoverlive] = useState("");
   const [loading, setLoading] = useState(true);
+  const [Ispress, setIspress] = useState(false);
   const dispatch = useDispatch();
   let userId = "";
   if (JSON.parse(localStorage.getItem("UserInf")) !== null) {
     userId = JSON.parse(localStorage.getItem("UserInf")).userId;
   }
-
-  console.log(userId);
 
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
@@ -112,6 +111,7 @@ const OwnerAddApartmentHook = () => {
         return dataURLtoFile(images[index], Math.random() + ".png");
       }
     );
+    setIspress(true);
     const formdata = new FormData();
 
     formdata.append("Name", title);
@@ -134,6 +134,9 @@ const OwnerAddApartmentHook = () => {
   const res = useSelector((item) => item.AdminReducer.addApartment);
   useEffect(() => {
     if (loading === false) {
+      if (res) {
+        setIspress(false);
+      }
       if (res && res.data && res.data.statusCode === 200) {
         notify("This apartment has been added", "success");
 
@@ -181,6 +184,8 @@ const OwnerAddApartmentHook = () => {
     imgCover,
     imgCoverlive,
     onChangeImage,
+    loading,
+    Ispress,
   ];
 };
 
