@@ -10,43 +10,63 @@ const Ownersidebar = () => {
     >
       <h1 className="my-4 text-gray-400 ">MENU</h1>
 
-      <div className=" flex items-center gap-3 mt-9">
+      <Link
+        className={`flex items-center gap-3 mt-4 p-2 hover:bg-gray-100 rounded-md ${
+          pathName.pathname === "/owner/dashboard" ? " bg-gray-100" : null
+        }`}
+        to={"/owner/dashboard"}
+      >
         <div className="w-8 h-8 rounded-md bg-dash"></div>
-        <Link to={"/owner/dashboard"}>
-          <h1>Dashboard</h1>
-        </Link>
-      </div>
-      <div className=" flex items-center gap-3 mt-6">
+        <h1>Dashboard</h1>
+      </Link>
+      <Link
+        to={"/owner/notification"}
+        className={`flex items-center gap-3 mt-4 p-2 hover:bg-gray-100 rounded-md ${
+          pathName.pathname === "/owner/notification" ? " bg-gray-100" : null
+        }`}
+      >
         <div className="w-8 h-8 rounded-md bg-notifi font-medium"></div>
-        <Link to={"/owner/notification"}>
-          <h1>Notification</h1>
-        </Link>
-      </div>
+        <h1>Notification</h1>
+      </Link>
 
-      <div className=" flex items-center gap-3 mt-6">
+      <Link
+        to={"/owner/flat"}
+        className={`flex items-center gap-3 mt-4 p-2 hover:bg-gray-100 rounded-md ${
+          pathName.pathname === "/owner/flat" ? " bg-gray-100" : null
+        }`}
+      >
         <div className="w-8 h-8 rounded-md bg-flat font-medium"></div>
-        <Link to={"/owner/flat"}>
-          <h1>Flat</h1>
-        </Link>
-      </div>
-      <div className=" flex items-center gap-3 mt-6">
+        <h1>Flat</h1>
+      </Link>
+      <Link
+        to={"/owner/update-password"}
+        className={`flex items-center gap-3 mt-4 p-2 hover:bg-gray-100 rounded-md ${
+          pathName.pathname === "/owner/update-password" ? " bg-gray-100" : null
+        }`}
+      >
         <div className="w-8 h-8 rounded-md bg-pass font-medium"></div>
-        <Link to={"/owner/update-password"}>
-          <h1>Password</h1>
-        </Link>
-      </div>
-      <div className=" flex items-center gap-3 mt-6">
+        <h1>Password</h1>
+      </Link>
+      <Link
+        to={"/owner/user"}
+        className={`flex items-center gap-3 mt-4 p-2 hover:bg-gray-100 rounded-md ${
+          pathName.pathname === "/owner/user" ? " bg-gray-100" : null
+        }`}
+      >
         <div className="w-8 h-8 rounded-md bg-user font-medium"></div>
-        <Link to={"/owner/user"}>
+        <Link>
           <h1>User</h1>
         </Link>
-      </div>
-      <div className=" flex items-center gap-3 mt-6">
+      </Link>
+      <Link
+        to={"/owner/update-profile"}
+        className={`flex items-center gap-3 mt-4 p-2 hover:bg-gray-100 rounded-md ${
+          pathName.pathname === "/owner/update-profile" ? " bg-gray-100" : null
+        }`}
+      >
         <div className="w-8 h-8 rounded-md bg-editprof font-medium"></div>
-        <Link to={"/owner/update-profile"}>
-          <h1>Edit Profile</h1>
-        </Link>
-      </div>
+        <h1>Edit Profile</h1>
+      </Link>
     </div>
   );
 };

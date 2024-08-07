@@ -42,15 +42,15 @@ const AdminDash = ({ clicker }) => {
         <div className=" grid grid-cols-12 justify-between gap-4 mt-10">
           <div className="col-span-12 sm:col-span-6 md:col-span-4 text-center w-[150px] m-auto h-[150px] flex flex-col justify-center items-center rounded-xl bg-dash text-white">
             <h1 className=" font-bold text-4xl mb-2">56</h1>
-            <p className=" font-medium">Total Users</p>
+            <p className=" font-thin ">Total Users</p>
           </div>
           <div className="col-span-12 sm:col-span-6 md:col-span-4 text-center w-[150px] m-auto h-[150px] flex flex-col justify-center items-center rounded-xl bg-white shadow-lg">
-            <h1 className=" font-bold text-4xl mb-2">56</h1>
-            <p className=" font-medium">Total Users</p>
+            <h1 className=" font-bold text-4xl mb-2">12</h1>
+            <p className="  font-thin">Pending requirements</p>
           </div>
           <div className="col-span-12 sm:col-span-6 md:col-span-4 text-center w-[150px] m-auto h-[150px] flex flex-col justify-center items-center rounded-xl bg-white shadow-lg">
-            <h1 className=" font-bold text-4xl mb-2">56</h1>
-            <p className=" font-medium">Total Users</p>
+            <h1 className=" font-bold text-4xl mb-2">13</h1>
+            <p className=" font-thin">Profile Visited</p>
           </div>
         </div>
       </div>
