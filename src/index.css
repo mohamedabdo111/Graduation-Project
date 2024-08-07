@@ -186,10 +186,23 @@ body {
     display: block !important;
     top: 54px !important;
     left: -13px !important;
-    width: 50% !important;
+    width: 80% !important;
     height: 100% !important;
     z-index: 2;
+    transition: all 0.5s;
+
     /* box-shadow: 2px 2px 8px 5px #d7d7d7; */
+  }
+
+  .hidedash {
+    position: absolute !important;
+    display: block !important;
+    top: 54px !important;
+    left: calc(-83%) !important;
+    width: 80% !important;
+    height: 100% !important;
+    z-index: 2;
+    transition: all 0.5s;
   }
 }
 

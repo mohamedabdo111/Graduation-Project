@@ -8,7 +8,7 @@ const GetAllApartmentHook = () => {
   const [data, setData] = useState("");
   const [search, setSearch] = useState("");
 
-  const limit = 3;
+  const limit = 5;
   const get = async (word) => {
     setLoading(true);
     await dispatch(GetAllApartmentAction(`PageSize=${limit}&Search=${word}`));

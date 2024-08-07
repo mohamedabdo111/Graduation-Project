@@ -19,7 +19,9 @@ const AdminAllUsersHook = (role) => {
   };
 
   useEffect(() => {
-    get(1, 5);
+    if (role) {
+      get(1, 5);
+    }
     const numbers = async () => {
       setLoadingg(true);
       await dispatch(GetNumbersUsersAction(role));

@@ -67,7 +67,7 @@ const SidebarSearchHook = () => {
     }
     dispatch(
       GetAllApartmentAction(
-        `PageNumber=${1}&PageSize=${3}&Search=${search}&Gender=${gender}&City=${city}&CountInApartment=${users}&minPrice=${minPrice}`
+        `PageNumber=${1}&PageSize=${5}&Search=${search}&Gender=${gender}&City=${city}&CountInApartment=${users}&minPrice=${minPrice}`
       )
     );
     setLoading(false);

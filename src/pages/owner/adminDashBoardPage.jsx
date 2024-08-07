@@ -12,7 +12,7 @@ const OwnerDashBoardPage = () => {
     <div className=" grid grid-cols-12 mt-5">
       <div
         className={`hidden md:block md:col-span-4 lg:col-span-3 m-3 ${
-          active ? "dispalydash" : null
+          active ? "dispalydash" : "hidedash"
         }`}
       >
         <Ownersidebar></Ownersidebar>

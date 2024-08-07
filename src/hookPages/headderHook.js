@@ -25,9 +25,16 @@ const HeadderHook = () => {
   // onclick bodyyy
 
   const Ref = useRef();
+  const divRef = useRef();
+  const minRef = useRef();
+
   useEffect(() => {
     document.addEventListener("click", (e) => {
-      if (e.target !== Ref.current) {
+      if (
+        e.target !== divRef.current &&
+        e.target !== minRef.current &&
+        e.target !== Ref.current
+      ) {
         setIsPressuser(false);
       }
     });
@@ -58,6 +65,8 @@ const HeadderHook = () => {
     userName,
     email,
     Ref,
+    divRef,
+    minRef,
   ];
 };
 

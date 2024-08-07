@@ -22,7 +22,6 @@ const OwnerDeleteApartmentHook = (id) => {
   };
 
   const res = useSelector((item) => item.AdminReducer.remove);
-  console.log(res);
 
   useEffect(() => {
     if (loading === false) {

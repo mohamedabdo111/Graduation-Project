@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Logo from "../../images/Group11.png";
 import img from "../../images/user login.png";
 import HeadderHook from "../../hookPages/headderHook";
@@ -15,6 +15,8 @@ const Header = () => {
     userName,
     email,
     Ref,
+    divRef,
+    minRef,
   ] = HeadderHook();
 
   return (
@@ -137,8 +139,12 @@ const Header = () => {
                   <div
                     className="absolute end-0 z-10 mt-2 w-60 rounded-md border border-gray-100 bg-white shadow-lg"
                     role="menu"
+                    ref={divRef}
                   >
-                    <div className=" rounded-lg px-4 py-2 text-sm text-gray-500 flex gap-1 items-center  ">
+                    <div
+                      className=" rounded-lg px-4 py-2 text-sm text-gray-500 flex gap-1 items-center"
+                      ref={minRef}
+                    >
                       <img
                         src={ImageUser === null ? img : ImageUser}
                         alt="imageUser"
